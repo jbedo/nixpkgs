@@ -266,6 +266,7 @@ let
     gsl = [ pkgs.gsl_1 ];
     h5 = [ pkgs.hdf5-cpp pkgs.which ];
     haven = [ pkgs.libiconv pkgs.zlib.dev ];
+    hdf5r = [ pkgs.hdf5 ];
     h5vc = [ pkgs.zlib.dev ];
     HiCseg = [ pkgs.gsl_1 ];
     imager = [ pkgs.x11 ];
