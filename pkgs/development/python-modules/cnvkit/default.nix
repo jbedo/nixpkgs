@@ -1,6 +1,5 @@
 { lib
 , fetchFromGitHub
-, fetchpatch
 , rPackages
 , buildPythonPackage
 , biopython
@@ -17,26 +16,19 @@
 , pyfaidx
 , python
 , R
+, joblib
 }:
 
 buildPythonPackage rec {
   pname = "CNVkit";
-  version = "0.9.7";
+  version = "0.9.9";
 
   src = fetchFromGitHub {
     owner = "etal";
     repo = "cnvkit";
     rev = "v${version}";
-    sha256 = "022zplgqil5l76vri647cyjx427vnbg5r2gw6lw712d2janvdjm7";
+    sha256 = "sha256-QT4SvznebJNzowyC1bkzk5YWNU9KJTusKiPMkKE8lOA=";
   };
-
-  patches = [
-    # Fix: AttributeError: module 'pandas.io.common' has no attribute 'EmptyDataError'
-    (fetchpatch {
-      url = "https://github.com/etal/cnvkit/commit/392adfffedfa0415e635b72c5027835b0a8d7ab5.patch";
-      sha256 = "0s0gwyy0hybmhc3jij2v9l44b6lkcmclii8bkwsazzj2kc24m2rh";
-    })
-  ];
 
   propagatedBuildInputs = [
     biopython
@@ -52,6 +44,7 @@ buildPythonPackage rec {
     pillow
     pomegranate
     rPackages.DNAcopy
+    joblib
   ];
 
   checkInputs = [ R ];
