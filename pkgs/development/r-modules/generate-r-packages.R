@@ -1,9 +1,11 @@
 #!/usr/bin/env Rscript
 library(data.table)
 library(parallel)
+library(BiocManager)
 cl <- makeCluster(10)
 
-biocVersion <- 3.11
+biocVersion <- BiocManager:::.version_map()
+biocVersion <-  as.numeric(as.character(max(biocVersion[biocVersion$R == getRversion()[, 1:2], "Bioc"])))
 snapshotDate <- Sys.Date()-1
 
 mirrorUrls <- list( bioc=paste0("http://bioconductor.statistik.tu-dortmund.de/packages/", biocVersion, "/bioc/src/contrib/")
