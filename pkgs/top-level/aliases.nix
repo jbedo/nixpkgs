@@ -40,8 +40,14 @@ mapAliases ({
   adobe_flex_sdk = apache-flex-sdk; # added 2018-06-01
   ag = silver-searcher; # added 2018-04-25
   aircrackng = aircrack-ng; # added 2016-01-14
-  alienfx = throw "alienfx has been removed."; # added 2019-12-08
   aleth = throw "aleth (previously packaged as cpp_ethereum) has been removed; abandoned upstream."; # added 2020-11-30
+  alienfx = throw "alienfx has been removed."; # added 2019-12-08
+  alsaLib = alsa-lib; # added 2021-06-09
+  alsaOss = alsa-oss; # added 2021-06-10
+  alsaPlugins = alsa-plugins; # added 2021-06-10
+  alsaPluginWrapper = alsa-plugins-wrapper; # added 2021-06-10
+  alsaTools = alsa-tools; # added 2021-06-10
+  alsaUtils = alsa-utils; # added 2021-06-10
   amazon-glacier-cmd-interface = throw "amazon-glacier-cmd-interface has been removed due to it being unmaintained."; # added 2020-10-30
   ammonite-repl = ammonite; # added 2017-05-02
   amsn = throw "amsn has been removed due to being unmaintained."; # added 2020-12-09
@@ -152,6 +158,7 @@ mapAliases ({
   cups-googlecloudprint = throw "Google Cloudprint is officially discontinued since Jan 2021, more info https://support.google.com/chrome/a/answer/9633006";
   cquery = throw "cquery has been removed because it is abandoned by upstream. Consider switching to clangd or ccls instead."; # added 2020-06-15
   cv = progress; # added 2015-09-06
+  cvs_fast_export = cvs-fast-export; # added 2021-06-10
   d1x_rebirth = dxx-rebirth; # added 2018-04-25
   d2x_rebirth = dxx-rebirth; # added 2018-04-25
   dart_dev = throw "Non-stable versions of Dart have been removed."; # added 2020-01-15
@@ -515,6 +522,7 @@ mapAliases ({
   openjpeg_2 = openjpeg; # added 2021-01-25
   opensans-ttf = open-sans; # added 2018-12-04
   openssh_with_kerberos = openssh; # added 2018-01-28
+  orchis = orchis-theme; # added 2021-06-09
   onnxruntime = throw "onnxruntime has been removed due to poor maintainability"; # added 2020-12-04
   osquery = throw "osquery has been removed."; # added 2019-11-24
   osxfuse = macfuse-stubs; # added 2021-03-20
@@ -593,6 +601,7 @@ mapAliases ({
   pkgconfig = pkg-config; # added 2018-02-02, moved to aliases.nix 2021-01-18
   pkgconfigUpstream = pkg-configUpstream; # added 2018-02-02
   planner = throw "planner has been removed from nixpkgs, as it is no longer developed and still uses python2/PyGTK."; # added 2021-02-02
+  pleroma-otp = pleroma; # added 2021-07-10
   pltScheme = racket; # just to be sure
   plexpy = tautulli; # plexpy got renamed to tautulli, added 2019-02-22
   pmtools = acpica-tools; # added 2018-11-01
@@ -808,6 +817,11 @@ mapAliases ({
   telepathy_qt5 = libsForQt5.telepathy;  # added 2015-12-19
   telepathy_salut = telepathy-salut; # added 2018-02-25
   telnet = inetutils; # added 2018-05-15
+  terraform_1_0_0 = terraform_1_0; # added 2021-06-15
+  terraform_0_12 = throw "terraform 0.12 has been removed"; # added 2021-06-15
+  terraform_0_13 = throw "terraform 0.13 has been removed"; # added 2021-06-15
+  terraform_0_14 = throw "terraform 0.14 has been removed"; # added 2021-06-15
+  terraform_0_15 = throw "terraform 0.15 has been removed"; # added 2021-06-15
   terraform-provider-ibm = terraform-providers.ibm; # added 2018-09-28
   terraform-provider-libvirt = terraform-providers.libvirt; # added 2018-09-28
   terraform-provider-lxd = terraform-providers.lxd; # added 2020-03-16
@@ -993,6 +1007,8 @@ mapAliases ({
 
   /* Added 2021-01-02 */
   ttyrec = ovh-ttyrec;
+
+  tt-rss-plugin-tumblr-gdpr = throw "tt-rss-plugin-tumblr-gdpr was removed because tumblr does not require gdpr acceptance to fetch rss feeds anymore"; # added 2012-06-12
 
   zplugin = zinit; # Added 2021-01-30
 
