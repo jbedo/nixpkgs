@@ -645,7 +645,7 @@ in with self; {
   OmicsLonDA = derive2 { name="OmicsLonDA"; version="1.6.0"; sha256="0ynjca24mzr902lcima59w4gaazdg7yxhhn88dqalkx20nzxr82k"; depends=[BiocGenerics BiocParallel ggplot2 gss plyr pracma SummarizedExperiment zoo]; };
   Omixer = derive2 { name="Omixer"; version="1.0.4"; sha256="0bdfprq3s3mhnj7xrvkh3gphpa87cw3yfi3gddhbhm6nxm7lya0b"; depends=[dplyr forcats ggplot2 gridExtra magrittr readr stringr tibble tidyselect]; };
   OmnipathR = derive2 { name="OmnipathR"; version="2.0.0"; sha256="18v5kbq7r61r1s69rcssgqfw5733i61npx3831bw7by9q5z826mi"; depends=[dplyr igraph jsonlite rlang tidyr]; };
-  Onassis = derive2 { name="Onassis"; version="1.12.0"; sha256="18rypslkr13a6ifgdr813cmq3n6v2mbdl23298iq6wfzl9i1cak8"; depends=[AnnotationDbi clusteval data_table dendextend DT GEOmetadb ggfortify ggplot2 knitr OnassisJavaLibs RCurl rJava RSQLite Rtsne]; };
+  Onassis = derive2 { name="Onassis"; version="1.12.0"; sha256="18rypslkr13a6ifgdr813cmq3n6v2mbdl23298iq6wfzl9i1cak8"; depends=[AnnotationDbi data_table dendextend DT GEOmetadb ggfortify ggplot2 knitr OnassisJavaLibs RCurl rJava RSQLite Rtsne]; };
   OncoScore = derive2 { name="OncoScore"; version="1.18.0"; sha256="0z9js0s8s50lfa4qkqp8rh72l2l4v5wc7bgwp69cn8czfllf00n8"; depends=[biomaRt]; };
   OncoSimulR = derive2 { name="OncoSimulR"; version="2.20.0"; sha256="0q0d7iy9z3v8154cxkdhw326cy4dra4aq9006lcysb1vrb7zxd72"; depends=[car data_table dplyr ggplot2 ggrepel graph gtools igraph RColorBrewer Rcpp Rgraphviz smatr]; };
   OpenStats = derive2 { name="OpenStats"; version="1.2.0"; sha256="0378q1qwyx78i4y1q4wz6mf22h38cv63wynvgpdcz3bs84sn56p1"; depends=[AICcmodavg car Hmisc jsonlite knitr MASS nlme rlist summarytools]; };
