@@ -97,6 +97,18 @@ let
         };
       };
 
+      arrterian.nix-env-selector = buildVscodeMarketplaceExtension {
+        mktplcRef = {
+          name = "nix-env-selector";
+          publisher = "arrterian";
+          version = "1.0.7";
+          sha256 = "0e76885c9dbb6dca4eac8a75866ec372b948cc64a3a3845327d7c3ef6ba42a57";
+        };
+        meta = {
+          license = lib.licenses.mit;
+        };
+      };
+
       ms-python.vscode-pylance = buildVscodeMarketplaceExtension {
         mktplcRef = {
           name = "vscode-pylance";
@@ -273,8 +285,8 @@ let
         mktplcRef = {
           name = "vscode-markdownlint";
           publisher = "DavidAnson";
-          version = "0.38.0";
-          sha256 = "0d6hbsjrx1j8wrmfnvdwsa7sci1brplgxwkmy6sp74va7zxfjnqv";
+          version = "0.42.1";
+          sha256 = "c8c0647e0dd786fe68becca6dc73eade5f4220a26ab9faff8dd813a14b25df51";
         };
         meta = with lib; {
           license = licenses.mit;
@@ -889,16 +901,9 @@ let
 
       ms-vscode-remote.remote-ssh = callPackage ./remote-ssh { };
 
-      ms-python.python =
-        let
-          raw-package = callPackage ./python {
-            extractNuGet = callPackage ./python/extract-nuget.nix { };
-          };
-        in
-        buildEnv {
-          name = "vscode-extension-ms-python-python-full";
-          paths = [ raw-package self.ms-toolsai.jupyter ];
-        };
+      ms-python.python = callPackage ./python {
+        extractNuGet = callPackage ./python/extract-nuget.nix { };
+      };
 
       msjsdiag.debugger-for-chrome = buildVscodeMarketplaceExtension {
         mktplcRef = {

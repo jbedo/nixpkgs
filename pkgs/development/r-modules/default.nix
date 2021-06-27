@@ -248,7 +248,6 @@ let
     Cardinal = [ pkgs.which ];
     chebpol = [ pkgs.fftw ];
     ChemmineOB = [ pkgs.openbabel pkgs.pkg-config ];
-    cit = [ pkgs.gsl_1 ];
     curl = [ pkgs.curl.dev ];
     data_table = [pkgs.zlib.dev] ++ lib.optional stdenv.isDarwin pkgs.llvmPackages.openmp;
     devEMF = [ pkgs.xorg.libXft.dev pkgs.x11 ];
@@ -489,6 +488,8 @@ let
     "DeducerText"
     "Demerelate"
     "detrendeR"
+    "dpa"
+    "dynamicGraph"
     "dynBiplotGUI"
     "EasyqpcR"
     "EcoVirtual"
