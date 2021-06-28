@@ -4171,6 +4171,8 @@ in {
 
   lml = callPackage ../development/python-modules/lml { };
 
+  lmnotify = callPackage ../development/python-modules/lmnotify { };
+
   lmtpd = callPackage ../development/python-modules/lmtpd { };
 
   localimport = callPackage ../development/python-modules/localimport { };
@@ -5344,6 +5346,8 @@ in {
   pyshark = callPackage ../development/python-modules/pyshark { };
 
   pysiaalarm = callPackage ../development/python-modules/pysiaalarm { };
+
+  pysyncthru = callPackage ../development/python-modules/pysyncthru { };
 
   pytest-subprocess = callPackage ../development/python-modules/pytest-subprocess { };
 
@@ -8214,6 +8218,8 @@ in {
 
   srp = callPackage ../development/python-modules/srp { };
 
+  srpenergy = callPackage ../development/python-modules/srpenergy { };
+
   srptools = callPackage ../development/python-modules/srptools { };
 
   srsly = callPackage ../development/python-modules/srsly { };
@@ -8243,6 +8249,8 @@ in {
   };
 
   starkbank-ecdsa = callPackage ../development/python-modules/starkbank-ecdsa { };
+
+  starline = callPackage ../development/python-modules/starline { };
 
   staticjinja = callPackage ../development/python-modules/staticjinja { };
 
