@@ -8,6 +8,7 @@ stdenv.mkDerivation {
   buildInputs = [ wget ];
 
   nativeBuildInputs = [
+    nix
     git
     (rWrapper.override {
       packages = with rPackages; [

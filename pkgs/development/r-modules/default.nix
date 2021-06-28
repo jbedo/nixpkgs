@@ -488,8 +488,6 @@ let
     "DeducerText"
     "Demerelate"
     "detrendeR"
-    "dpa"
-    "dynamicGraph"
     "dynBiplotGUI"
     "EasyqpcR"
     "EcoVirtual"
