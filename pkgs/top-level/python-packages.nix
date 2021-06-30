@@ -325,6 +325,8 @@ in {
 
   aiomultiprocess = callPackage ../development/python-modules/aiomultiprocess { };
 
+  aiomusiccast = callPackage ../development/python-modules/aiomusiccast { };
+
   aiomysql = callPackage ../development/python-modules/aiomysql { };
 
   aionotify = callPackage ../development/python-modules/aionotify { };
@@ -2307,6 +2309,8 @@ in {
 
   enum-compat = callPackage ../development/python-modules/enum-compat { };
 
+  env-canada = callPackage ../development/python-modules/env-canada { };
+
   envisage = callPackage ../development/python-modules/envisage { };
 
   envs = callPackage ../development/python-modules/envs { };
@@ -3257,6 +3261,8 @@ in {
   hieroglyph = callPackage ../development/python-modules/hieroglyph { };
 
   hijri-converter = callPackage ../development/python-modules/hijri-converter { };
+
+  hikvision = callPackage ../development/python-modules/hikvision { };
 
   hiredis = callPackage ../development/python-modules/hiredis { };
 
@@ -5229,6 +5235,8 @@ in {
 
   phonenumbers = callPackage ../development/python-modules/phonenumbers { };
 
+  netmap = callPackage ../development/python-modules/netmap { };
+
   openapi-core = callPackage ../development/python-modules/openapi-core { };
 
   pdunehd = callPackage ../development/python-modules/pdunehd { };
@@ -5319,6 +5327,8 @@ in {
 
   pyflick = callPackage ../development/python-modules/pyflick { };
 
+  pyfreedompro = callPackage ../development/python-modules/pyfreedompro { };
+
   pygti = callPackage ../development/python-modules/pygti { };
 
   pyheos = callPackage ../development/python-modules/pyheos { };
@@ -5339,6 +5349,8 @@ in {
 
   pynx584 = callPackage ../development/python-modules/pynx584 { };
 
+  pyrfxtrx = callPackage ../development/python-modules/pyrfxtrx { };
+
   pyrogram = callPackage ../development/python-modules/pyrogram { };
 
   pysbd = callPackage ../development/python-modules/pysbd { };
@@ -5357,6 +5369,8 @@ in {
 
   python-ecobee-api = callPackage ../development/python-modules/python-ecobee-api { };
 
+  python-ipmi = callPackage ../development/python-modules/python-ipmi { };
+
   python-izone = callPackage ../development/python-modules/python-izone { };
 
   python-juicenet = callPackage ../development/python-modules/python-juicenet { };
@@ -5364,6 +5378,8 @@ in {
   python-openems = callPackage ../development/python-modules/python-openems { };
 
   python-openzwave-mqtt = callPackage ../development/python-modules/python-openzwave-mqtt { };
+
+  python-songpal = callPackage ../development/python-modules/python-songpal { };
 
   python-tado = callPackage ../development/python-modules/python-tado { };
 
@@ -7982,7 +7998,11 @@ in {
 
   sly = callPackage ../development/python-modules/sly { };
 
+  smart-meter-texas = callPackage ../development/python-modules/smart-meter-texas { };
+
   smart-open = callPackage ../development/python-modules/smart-open { };
+
+  smarthab = callPackage ../development/python-modules/smarthab { };
 
   smartypants = callPackage ../development/python-modules/smartypants { };
 
@@ -8053,6 +8073,10 @@ in {
   somajo = callPackage ../development/python-modules/somajo { };
 
   somecomfort = callPackage ../development/python-modules/somecomfort { };
+
+  somfy-mylink-synergy = callPackage ../development/python-modules/somfy-mylink-synergy { };
+
+  sonarr = callPackage ../development/python-modules/sonarr { };
 
   sopel = callPackage ../development/python-modules/sopel { };
 

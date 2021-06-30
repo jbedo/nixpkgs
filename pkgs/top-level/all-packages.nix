@@ -1300,6 +1300,8 @@ in
 
   bcachefs-tools = callPackage ../tools/filesystems/bcachefs-tools { };
 
+  bisq-desktop = callPackage ../applications/blockchains/bisq-desktop { };
+
   bit = callPackage ../applications/version-management/git-and-tools/bit { };
 
   bitwarden = callPackage ../tools/security/bitwarden { };
@@ -2786,7 +2788,10 @@ in
       Accelerate CoreGraphics CoreVideo;
   };
 
-  gpg-tui = callPackage ../tools/security/gpg-tui { };
+  gpg-tui = callPackage ../tools/security/gpg-tui {
+    inherit (darwin.apple_sdk.frameworks) AppKit Foundation;
+    inherit (darwin) libobjc libresolv;
+  };
 
   goa = callPackage ../development/tools/goa { };
 
@@ -4953,6 +4958,8 @@ in
   fwknop = callPackage ../tools/security/fwknop { };
 
   exfat = callPackage ../tools/filesystems/exfat { };
+
+  exfatprogs = callPackage ../tools/filesystems/exfatprogs { };
 
   dos2unix = callPackage ../tools/text/dos2unix { };
 
@@ -13718,6 +13725,8 @@ in
 
   kustomize = callPackage ../development/tools/kustomize { };
 
+  kustomize_3 = callPackage ../development/tools/kustomize/3.nix { };
+
   kustomize-sops = callPackage ../development/tools/kustomize/kustomize-sops.nix { };
 
   ktlint = callPackage ../development/tools/ktlint { };
@@ -18097,7 +18106,7 @@ in
   };
 
   SDL = callPackage ../development/libraries/SDL ({
-    inherit (darwin.apple_sdk.frameworks) OpenGL CoreAudio CoreServices AudioUnit Kernel Cocoa;
+    inherit (darwin.apple_sdk.frameworks) OpenGL CoreAudio CoreServices AudioUnit Kernel Cocoa GLUT;
   } // lib.optionalAttrs stdenv.hostPlatform.isAndroid {
     # libGLU doesn’t work with Android’s SDL
     libGLU = null;
@@ -21068,7 +21077,7 @@ in
 
   # Update this when adding the newest kernel major version!
   # And update linux_latest_for_hardened below if the patches are already available
-  linuxPackages_latest = linuxPackages_5_12;
+  linuxPackages_latest = linuxPackages_5_13;
   linux_latest = linuxPackages_latest.kernel;
 
   # Realtime kernel packages.
@@ -22083,6 +22092,7 @@ in
     inherit (plasma5Packages) breeze-icons;
   };
   flat-remix-gtk = callPackage ../data/themes/flat-remix-gtk { };
+  flat-remix-gnome = callPackage ../data/themes/flat-remix-gnome { };
 
   font-awesome_4 = (callPackage ../data/fonts/font-awesome-5 { }).v4;
   font-awesome_5 = (callPackage ../data/fonts/font-awesome-5 { }).v5;
@@ -23262,6 +23272,8 @@ in
 
   communi = libsForQt5.callPackage ../applications/networking/irc/communi { };
 
+  complete-alias = callPackage ../tools/misc/complete-alias { };
+
   confclerk = callPackage ../applications/misc/confclerk { };
 
   copyq = libsForQt514.callPackage ../applications/misc/copyq { };
@@ -23657,6 +23669,8 @@ in
   gspeech = callPackage ../applications/audio/gspeech { };
 
   haruna = libsForQt5.callPackage ../applications/video/haruna { };
+
+  helix = callPackage ../applications/editors/helix { };
 
   icesl = callPackage ../applications/misc/icesl { };
 
@@ -24841,6 +24855,8 @@ in
 
   irssi_fish = callPackage ../applications/networking/irc/irssi/fish { };
 
+  kirc = callPackage ../applications/networking/irc/kirc { };
+
   ir.lv2 = callPackage ../applications/audio/ir.lv2 { };
 
   istioctl = callPackage ../applications/networking/cluster/istioctl { };
@@ -25708,6 +25724,8 @@ in
   nwg-launchers = callPackage ../applications/misc/nwg-launchers { };
 
   nwg-menu = callPackage ../applications/misc/nwg-menu { };
+
+  nwg-panel = callPackage ../applications/misc/nwg-panel { };
 
   ocenaudio = callPackage ../applications/audio/ocenaudio { };
 
@@ -26586,6 +26604,8 @@ in
 
   remotebox = callPackage ../applications/virtualization/remotebox { };
 
+  restique = libsForQt5.callPackage ../applications/backup/restique { };
+
   retroshare = libsForQt5.callPackage ../applications/networking/p2p/retroshare { };
 
   rgp = libsForQt5.callPackage ../development/tools/rgp { };
@@ -27252,6 +27272,8 @@ in
   traverso = libsForQt5.callPackage ../applications/audio/traverso { };
 
   trayer = callPackage ../applications/window-managers/trayer { };
+
+  tinywl = callPackage ../applications/window-managers/tinywl { };
 
   tinywm = callPackage ../applications/window-managers/tinywm { };
 
@@ -29876,6 +29898,18 @@ in
 
   rubiks = callPackage ../development/libraries/science/math/rubiks { };
 
+  p4est-sc = callPackage ../development/libraries/science/math/p4est-sc {
+    p4est-sc-debugEnable = false;
+  };
+
+  p4est-sc-dbg = callPackage ../development/libraries/science/math/p4est-sc { };
+
+  p4est = callPackage ../development/libraries/science/math/p4est { };
+
+  p4est-dbg = callPackage ../development/libraries/science/math/p4est {
+    p4est-sc = p4est-sc-dbg;
+  };
+
   petsc = callPackage ../development/libraries/science/math/petsc { };
 
   parmetis = callPackage ../development/libraries/science/math/parmetis { };
@@ -30401,7 +30435,7 @@ in
 
   root = callPackage ../applications/science/misc/root {
     python = python3;
-    inherit (darwin.apple_sdk.frameworks) Cocoa OpenGL;
+    inherit (darwin.apple_sdk.frameworks) Cocoa CoreSymbolication OpenGL;
   };
 
   root5 = lowPrio (callPackage ../applications/science/misc/root/5.nix {
