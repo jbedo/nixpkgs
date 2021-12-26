@@ -58,6 +58,7 @@ buildGoPackage rec {
 
     # Explicitly configure paths in the config file
     sed -i 's|^# mksquashfs path =.*$|mksquashfs path = ${lib.makeBinPath [squashfsTools]}/mksquashfs|' $out/etc/singularity/singularity.conf
+    sed -i 's|^# unsquashfs path =.*$|unsquashfs path = ${lib.makeBinPath [squashfsTools]}/unsquashfs|' $out/etc/singularity/singularity.conf
     sed -i 's|^# cryptsetup path =.*$|cryptsetup path = ${lib.makeBinPath [cryptsetup]}/cryptsetup|' $out/etc/singularity/singularity.conf
 
     runHook postInstall
