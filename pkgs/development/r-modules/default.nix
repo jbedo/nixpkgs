@@ -1321,6 +1321,13 @@ let
       RGL_USE_NULL = "true";
     });
 
+    reticulate = old.reticulate.overrideAttrs (_: {
+      preConfigure = ''
+        substituteInPlace R/config.R \
+          --replace "/opt/local/python" "${pkgs.python3}"
+      '';
+    });
+
     Rhdf5lib = let
       hdf5 = pkgs.hdf5_1_10.overrideAttrs (attrs: {configureFlags = attrs.configureFlags ++ ["--enable-cxx"];});
     in old.Rhdf5lib.overrideAttrs (attrs: {
